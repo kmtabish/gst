@@ -4,7 +4,7 @@ const addUser = require('./../controller/addUser');
 const getTask = require('./../controller/getData');
 const getUser = require('./../controller/getUser');
 const getHSN = require('./../controller/getHSN');
-
+var path = require('path');
 //GraphQL Routs
 const bodyParser = require('body-parser');
 
@@ -19,7 +19,7 @@ module.exports = function(app) {
 
    //Default route
    app.get('*', function(req, res) {
-      res.sendFile('index.html', { root: '/home/ttnd/testProjects/km-graphql/public/'});
+     res.sendFile(path.resolve('public/index.html'));
     });
 
 }
