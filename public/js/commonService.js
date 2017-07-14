@@ -9,10 +9,9 @@
         var configObj = {
           method: 'GET',
           url: "https://gstdata.herokuapp.com/gethsn?limit="+limit+"&skip="+skip,
-          headers : {
-                       'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
-                       'Access-Control-Allow-Origin' : true
-                   }
+          headers: {
+              'Access-Control-Allow-Origin' : "*",
+              },
         };
         $http(configObj).then(function fullfilled(response){
           console.log(response);
