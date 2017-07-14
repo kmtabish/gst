@@ -5,10 +5,8 @@ module.exports = {
   get:function(req, res){
     var limit = parseInt(req.query.limit);
     var skip = (parseInt(req.query.skip)-1) * parseInt(limit);
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,contenttype'); // If needed
-    res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
 
     console.log("{{{{{{{{{{{}}}}}}}}}}}", limit, skip)
       db.on('connected',()=> {console.log('MongoDB Connected')});
