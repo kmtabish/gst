@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="GSTApp">
     <head>
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+
+        <script src="http://unpkg.com/angular-ui-router/release/angular-ui-router.min.js">
+        <script type="text/javascript" src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="app.js"></script>
+        <script src="routes.js"></script>
+        <script src="js/homeController.js"></script>
+        <script src="js/commonService.js"></script>
     </head>
     <body>
     <h1>Hello Test</h1>
+    <div class="alert alert-success" role="alert">
+  <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+</div>
+ <div ui-view=""></div>
     </body>
 </html>

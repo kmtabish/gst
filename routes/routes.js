@@ -6,7 +6,6 @@ const getUser = require('./../controller/getUser');
 const getHSN = require('./../controller/getHSN');
 var path = require('path');
 //GraphQL Routs
-const bodyParser = require('body-parser');
 
 module.exports = function(app) {
   app.post('/create',createTask.post);
@@ -16,10 +15,11 @@ module.exports = function(app) {
   app.get('/gethsn',getHSN.get);
 
 
+   //
+  //  //Default route
+  //  app.get('*', function(req, res) {
+  //    res.sendFile(path.resolve('public/index1.html'));
+  //   });
 
-   //Default route
-   app.get('*', function(req, res) {
-     res.sendFile(path.resolve('public/index.html'));
-    });
 
 }
