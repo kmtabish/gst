@@ -9,12 +9,11 @@
         var configObj = {
           method: 'GET',
           url: "https://gstdata.herokuapp.com/gethsn?limit="+limit+"&skip="+skip,
-          headers: {
+          header: {
               'Access-Control-Allow-Origin' : "*",
               },
         };
         $http(configObj).then(function fullfilled(response){
-          console.log(response);
           return deferred.resolve(response);
         }).catch(function rejection(error){
           console.log("Error: ", error);

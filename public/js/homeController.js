@@ -21,7 +21,8 @@
               //
               // console.log("Call to doSomething took " + performance.now() + " milliseconds.");
               gstService.getData(10, 2).then(function(data) {
-                console.log(data)
+                HomeCtrl.data = data.data.data;
+                console.log(HomeCtrl.data)
               })
     }])
 })(window.angular)

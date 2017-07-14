@@ -13,6 +13,7 @@ module.exports = function(app) {
   app.get('/get',getTask.get);
   app.get('/getuser',getUser.get);
   app.get('/gethsn',getHSN.get);
+    app.get('/gethsncount',getHSN.getCount);
 
 
    //
