@@ -1,8 +1,30 @@
-<div>Helloooooooooooooo</div>
-<div>{{HomeCtrl.test}}</div>
-<div class="btn-group">
+<!-- <div>Helloooooooooooooo</div> -->
+<!-- <div>{{HomeCtrl.test}}</div> -->
+<!-- <div class="btn-group">
    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
+</div> -->
+
+<form class="form-inline data has-success" style="text-allign:center">
+
+  <div class="form-group ">
+    <label for="inputPassword2" class="sr-only">Search</label>
+    <input type="search" class="form-control" id="inputPassword2" placeholder="Search..." ng-model="HomeCtrl.searchData">
+  </div>
+  <button type="submit" class="btn btn-default" ng-click="HomeCtrl.search()">Search HSN</button>
+</form>
+<div class="loader" ng-if="!HomeCtrl.data">
+  <img src="assets/images/Preloader_3.gif" alt="">
 </div>
-<div ng-if="HomeCtrl.data">{{HomeCtrl.data}}</div>
+<div class="data" ng-if="HomeCtrl.data" ng-repeat="data in HomeCtrl.data">
+
+  <!-- <span class="yellow">{{data.HSN_CODE}}</span>
+  <span class="green">{{data.Description}}</span> -->
+  <div class="row">
+  <div class="col-xs-6 yellow">{{data.HSN_CODE}}</div>
+  <div class="col-xs-6 green">{{data.Description}}</div>
+
+  </div>
+  <hr>
+  </div>
