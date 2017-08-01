@@ -5,14 +5,16 @@
    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
    <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
 </div> -->
+<!-- <form  class="light">
+  <input type="text" placeholder="Find on codeconvey">
+  <input type="submit" value="Search">
+</form>
 
-<form class="form-inline data has-success" style="text-align:center">
+</div> -->
+<form class="light" >
 
-  <div class="form-group ">
-    <label for="inputPassword2" class="sr-only">Search</label>
-    <input type="search" class="form-control" id="inputPassword2" placeholder="Search..." ng-model="HomeCtrl.searchData">
-  </div>
-  <button type="submit" class="btn btn-default" ng-click="HomeCtrl.search()">Search HSN</button>
+  <input type="text" placeholder="Search..." ng-model="HomeCtrl.searchData">
+  <input type="submit"  ng-click="HomeCtrl.search()" value="Search">
 </form>
 <div class="loader" ng-if="!HomeCtrl.data">
   <img src="assets/images/Preloader_3.gif" alt="">
@@ -22,9 +24,15 @@
   <!-- <span class="yellow">{{data.HSN_CODE}}</span>
   <span class="green">{{data.Description}}</span> -->
   <div class="row">
-  <div class="col-xs-2 yellow">{{data.HSN_CODE}}</div>
-  <div class="col-xs-10 green">{{data.Description}}</div>
+  <div class="col-xs-3 yellow">{{data.HSN_CODE}}</div>
+  <div class="col-xs-9 green">{{data.Description}}</div>
 
   </div>
   <hr>
+  </div>
+
+  <div class="row" ng-if="HomeCtrl.data && !HomeCtrl.data.length">
+    <div class="col-xs-12  data norecordfound">
+    Sorry! No Record Found.
+    </div<
   </div>

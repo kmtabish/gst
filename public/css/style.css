@@ -1,5 +1,5 @@
 .yellow {
-  background-color: #F1A208;
+  background-color: #00AFA0;
   color: white;
   display: inline-block;
   /*font-size: x-large;*/
@@ -10,12 +10,24 @@
 
 }
 .green {
-  background-color: #99CC00;
+  background-color: #32414B;
   color: white;
   display: inline-block;
     /*font-size: x-large;*/
-        text-align: center;
+        text-align: left;
         height: 100px;
+}
+
+.norecordfound {
+  background-color: #14A0A0;
+  color: white;
+  display: inline-block;
+  /*font-size: x-large;*/
+  text-align: center;
+  height: 100px;
+  margin: auto;
+    padding: 40px;
+
 }
 span{
   margin: 20px
@@ -27,3 +39,29 @@ span{
 .data{
   margin-top: 10px;
 }
+.row{
+  margin-right: 5px !important;
+margin-left: 5px !important;
+}
+
+.light {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 360px;
+}
+    .light input[type="text"] {
+      border: 1px solid #14A0A0;
+    float: left;
+    height: 45px;
+    padding: 4px;
+    width: 72%;
+}
+    .light input[type="submit"] {
+    background: none repeat scroll 0 0 #14A0A0;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 45px;
+    padding: 5px 20px;
+    text-transform:uppercase;
+    }
