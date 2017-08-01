@@ -2,16 +2,20 @@
   background-color: #F1A208;
   color: white;
   display: inline-block;
-  font-size: x-large;
+  /*font-size: x-large;*/
   text-align: center;
+  height: 100px;
+  margin: auto;
+    padding: 40px;
 
 }
 .green {
   background-color: #99CC00;
   color: white;
   display: inline-block;
-    font-size: x-large;
+    /*font-size: x-large;*/
         text-align: center;
+        height: 100px;
 }
 span{
   margin: 20px
@@ -21,5 +25,5 @@ span{
   margin-top: 50px;
 }
 .data{
-  margin-top: 50px;
+  margin-top: 10px;
 }

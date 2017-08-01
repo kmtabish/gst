@@ -25,6 +25,7 @@
                 console.log(HomeCtrl.data)
               })
               HomeCtrl.search = function() {
+                HomeCtrl.data = null;
               gstService.search(HomeCtrl.searchData).then(function(data) {
                 HomeCtrl.data = data.data.data;
                 console.log(HomeCtrl.data)
