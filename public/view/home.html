@@ -1,7 +1,7 @@
 
   <form class="light" >
     <input type="text" placeholder="Search..." ng-model="HomeCtrl.searchData"/>
-    <input type="submit"  ng-click="HomeCtrl.search(1)" value="Search"/>
+    <input type="submit"  ng-click="HomeCtrl.search(1, 'initial')" value="Search"/>
   </form>
 
   <div class="loader" ng-if="!HomeCtrl.data">
@@ -20,4 +20,7 @@
     <div class="col-xs-12  data norecordfound">
     Sorry! No Record Found.
   </div>
+</div>
+<div class="row" ng-if="(HomeCtrl.data && HomeCtrl.data.length>=10) && HomeCtrl.pagination!==0">
+<div class="col-xs-12  data loadmore" ng-click="HomeCtrl.search(1, 'pagination')">Load More...</div>
 </div>

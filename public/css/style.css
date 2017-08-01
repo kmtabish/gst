@@ -22,12 +22,20 @@
   background-color: #14A0A0;
   color: white;
   display: inline-block;
-  /*font-size: x-large;*/
   text-align: center;
   height: 100px;
   margin: auto;
     padding: 40px;
 
+}
+.loadmore {
+  background-color: #36C471;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  height: 100px;
+  margin: auto;
+    padding: 40px;
 }
 span{
   margin: 20px
