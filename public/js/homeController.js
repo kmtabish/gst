@@ -20,13 +20,13 @@
               // HomeCtrl.test = "Call to doSomething took " + performance.now() + " milliseconds."
               //
               // console.log("Call to doSomething took " + performance.now() + " milliseconds.");
-              gstService.getData(20, 1).then(function(data) {
+              gstService.getData(10, 1).then(function(data) {
                 HomeCtrl.data = data.data.data;
                 console.log(HomeCtrl.data)
               })
-              HomeCtrl.search = function() {
-                HomeCtrl.data = null;
-              gstService.search(HomeCtrl.searchData).then(function(data) {
+              HomeCtrl.search = function(page) {
+                HomeCtrl.data = null
+              gstService.search(HomeCtrl.searchData,10, page ).then(function(data) {
                 HomeCtrl.data = data.data.data;
                 console.log(HomeCtrl.data)
               })

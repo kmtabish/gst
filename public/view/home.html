@@ -1,38 +1,23 @@
-<!-- <div>Helloooooooooooooo</div> -->
-<!-- <div>{{HomeCtrl.test}}</div> -->
-<!-- <div class="btn-group">
-   <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Left</label>
-   <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable>Middle</label>
-   <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'" uib-uncheckable="uncheckable">Right</label>
-</div> -->
-<!-- <form  class="light">
-  <input type="text" placeholder="Find on codeconvey">
-  <input type="submit" value="Search">
-</form>
 
-</div> -->
-<form class="light" >
+  <form class="light" >
+    <input type="text" placeholder="Search..." ng-model="HomeCtrl.searchData"/>
+    <input type="submit"  ng-click="HomeCtrl.search(1)" value="Search"/>
+  </form>
 
-  <input type="text" placeholder="Search..." ng-model="HomeCtrl.searchData">
-  <input type="submit"  ng-click="HomeCtrl.search()" value="Search">
-</form>
-<div class="loader" ng-if="!HomeCtrl.data">
-  <img src="assets/images/Preloader_3.gif" alt="">
-</div>
-<div class="data" ng-if="HomeCtrl.data" ng-repeat="data in HomeCtrl.data">
-
-  <!-- <span class="yellow">{{data.HSN_CODE}}</span>
-  <span class="green">{{data.Description}}</span> -->
-  <div class="row">
-  <div class="col-xs-3 yellow">{{data.HSN_CODE}}</div>
-  <div class="col-xs-9 green">{{data.Description}}</div>
-
+  <div class="loader" ng-if="!HomeCtrl.data">
+    <img src="assets/images/Preloader_3.gif" alt="">
   </div>
-  <hr>
+
+  <div class="data" ng-if="HomeCtrl.data" ng-repeat="data in HomeCtrl.data">
+    <div class="row">
+      <div class="col-xs-3 yellow">{{data.HSN_CODE}}</div>
+      <div class="col-xs-9 green">{{data.Description}}</div>
+    </div>
+    <!-- <hr> -->
   </div>
 
   <div class="row" ng-if="HomeCtrl.data && !HomeCtrl.data.length">
     <div class="col-xs-12  data norecordfound">
     Sorry! No Record Found.
-    </div<
   </div>
+</div>

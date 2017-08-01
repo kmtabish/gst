@@ -21,11 +21,11 @@
         });
         return deferred.promise;
       },
-      search: function (search) {
+      search: function (search, limit, skip) {
         var deferred = $q.defer();
         var configObj = {
           method: 'GET',
-          url: "https://gstdata.herokuapp.com/search?test="+search,
+          url: "https://gstdata.herokuapp.com/search?test="+search+"limit="+limit+"&skip="+skip,
           header: {
               'Access-Control-Allow-Origin' : "*",
               },

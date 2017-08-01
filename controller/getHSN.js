@@ -16,6 +16,8 @@ module.exports = {
   },
   search:function(req, res){
     var hsncode= 0;
+    var limit = parseInt(req.query.limit);
+    var skip = (parseInt(req.query.skip)-1) * parseInt(limit);
         db.on('connected',()=> {console.log('MongoDB Connected')});
         if(isNaN(req.query.test)){
           hsncode=0
@@ -27,7 +29,6 @@ module.exports = {
                 throw err;
              console.log('HSN SEARCH fetched successfully!' );
       res.status(200).send({data:data});
-    })
-
+    }).skip(skip).limit(limit)
   }
 }
