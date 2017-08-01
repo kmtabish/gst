@@ -20,7 +20,7 @@
               // HomeCtrl.test = "Call to doSomething took " + performance.now() + " milliseconds."
               //
               // console.log("Call to doSomething took " + performance.now() + " milliseconds.");
-              gstService.getData(500, 2).then(function(data) {
+              gstService.getData(20, 1).then(function(data) {
                 HomeCtrl.data = data.data.data;
                 console.log(HomeCtrl.data)
               })
