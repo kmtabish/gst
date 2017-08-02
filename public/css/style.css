@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body {
-    margin-bottom: 0px;
+    padding-bottom: 10px;
     font-family: 'Open Sans', sans-serif !important;
 }
 .yellow {
@@ -48,7 +48,7 @@ body {
   height: 100px;
   font-size: x-large;
   margin: auto;
-    padding: 40px;
+    padding: 30px;
 }
 span{
   margin: 20px
