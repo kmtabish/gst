@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    margin-bottom: 0px;
+    font-family: 'Open Sans', sans-serif !important;
+}
 .yellow {
   background-color: #00AFA0;
   color: white;
@@ -6,17 +11,24 @@
   text-align: center;
   height: 100px;
   margin: auto;
-    padding: 40px;
+  padding: 40px;
+  font-weight: bold;
 
 }
 .green {
   background-color: #32414B;
   color: white;
   display: inline-block;
-    /*font-size: x-large;*/
-        text-align: left;
-        height: 100px;
+  text-align: left;
+  height: 100px;
+  overflow: hidden;
 }
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
 
 .norecordfound {
   background-color: #14A0A0;
@@ -34,6 +46,7 @@
   display: inline-block;
   text-align: center;
   height: 100px;
+  font-size: x-large;
   margin: auto;
     padding: 40px;
 }
@@ -51,7 +64,7 @@ span{
   margin-right: 5px !important;
 margin-left: 5px !important;
 }
-
+/*text box of search styles*/
 .light {
     margin: 0 auto;
     padding-top: 20px;
